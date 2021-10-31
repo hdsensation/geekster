@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Feedback</title>
+    <style>
+        body {
+            background-color:rgb(205, 92, 92);
+            margin: 0;
+            padding: 0;
+        }
+
+        .para {
+            height: 100vh;
+            width: 100%;
+            background-image: url(https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=774&q=80);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        form{
+            background-image: url(https://images.pexels.com/photos/8385422/pexels-photo-8385422.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
+            border: 20px solid black;
+            text-align: center;
+            margin: 100px;
+            padding: 30px;
+        }
+        h3:hover{
+            color: azure;
+        }
+        h1:hover{
+            color: blueviolet;
+        }
+        #sub:hover{
+            color: blue;
+            background-color: wheat;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="para">
+        
+    </div>
+    <div>
+        <h1 style="text-align: center;font-style: italic;font-weight: bolder;"> WELCOME TO FEEDBACK PAGE</h1>
+
+    </div>
+    <div class="cont">
+        <form>
+            <table>
+                <h1>Help us to serve you better</h1>
+                <label>FULL-NAME</label>
+                <input type="text" name="name" pattern="[a-Z]" required minlength="3" placeholder="Enter name"/><br>
+                <label>Contact</label>
+                +91<input type="tel" pattern="[0-9]" required minlength="10" maxlength="10" placeholder="Enter 10 digit mobile"><br>
+                <label>DISH NAME</label>
+                <input type="text"><br>
+                <label>Email</label>
+                <input type="email" required pattern=".+@+.\.com"><br>
+                <label>Rating To food</label>
+                <input type="radio" name="rt">
+                <label>Poor</label>
+                <input type="radio" name="rt">
+                <label>Average</label>
+                <input type="radio" name="rt">
+                <label>Good</label><br>
+                <label for="sel">How Many People Joined With you</label>
+                <select id="sel">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select><br>
+                <h3>Things You Liked</h3>
+                <input type="checkbox">
+                <label>Staff Behave</label>
+                <input type="checkbox">
+                <label>Hygiene</label>
+                <input type="checkbox">
+                <label>Ambience</label> <br>
+                <h3>Any suggestion :</h3>
+                <textarea rows="5" cols="50" placeholder="Enter your suggestion and Feedback"></textarea> <br>
+                <input id="sub" type="submit">
+            </table>
+        </form>
+    </div>
+</body>
+
+</html>

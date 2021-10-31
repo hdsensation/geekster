@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Landing</title>
+    <style>
+        .parallax {
+            height: 100vh;
+            width: 100%;
+            background-image: url(https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=774&q=80);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        body {
+            background-color: #E42855;
+        }
+
+        #head {
+            background-color: cyan;
+            height: 70px;
+            margin: 0;
+            text-align: center;
+        }
+
+        button {
+            background-color: khaki;
+            color: solid black;
+            padding: 10px 20px;
+        }
+
+        button:hover {
+            color: blue;
+            background-color: coral;
+        }
+
+        button::active {
+            background-color: bisque;
+            color: blanchedalmond;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parallax"></div>
+    <div id="head">
+        <h1>WELCOME TO CAFE PAGE</h1>
+    </div>
+    <div>
+        <table border="2">
+            <tr>
+                <td>
+                    <img
+                        src="https://images.pexels.com/photos/2983098/pexels-photo-2983098.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" />
+                </td>
+                <td>
+                    <h2 style="font-size:xx-large;text-decoration: underline;"><a href="https://www.burgerking.in/" />
+                        Delicious range of burgers</h2>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img
+                        src="https://images.pexels.com/photos/1653877/pexels-photo-1653877.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" />
+                </td>
+                <td>
+                    <h2 style="font-size: xx-large;text-decoration: underline;"><a
+                            href="https://www.dominos.co.in/" />Cheesy Pizza's</h2>
+                </td>
+            <tr>
+                <td>
+                    <img
+                        src="https://images.pexels.com/photos/9743517/pexels-photo-9743517.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
+                </td>
+                <td>
+                    <h2 style="font-size: xx-large;text-decoration: underline;"><a
+                            href="https://biryanibykilo.com/" />Delicious Biryani</h2>
+                </td>
+            </tr>
+            </tr>
+        </table>
+        <button> <a href="feedback.html">Click Here for Feedback</button>
+    </div>
+    <div>
+        <audio controls autoplay loop>
+            <source src="tune.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+</body>
+
+</html>
