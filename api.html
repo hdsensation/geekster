@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>API</title>
+    <style>
+        #user{
+            border: 10px solid black;
+            background-color: brown;
+            margin: 100px;
+            color: white;
+            padding: 50px;
+            width: 50vw;
+            height: 270px;
+
+        }
+        div{
+            height: 250px;
+            width: 650px;
+            margin: 20%;
+        }
+        body{
+            background-color: khaki;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <table id="user" border="3">
+            <th>USER</th>
+            <th>ID</th>
+            <th>AVATAR URL</th>
+            <tr>
+                <td id="data1"></td>
+                <td id="data2"></td>
+                <td id="data3"></td>
+            </tr>
+            <tr>
+                <td id="data4"></td>
+                <td id="data5"></td>
+                <td id="data6"></td>
+            </tr>
+        </table>
+    </div>
+    <script>
+        let d1 = document.getElementById('data1')
+        let d2 = document.getElementById('data2')
+        let d3 = document.getElementById('data3')
+        let d4 = document.getElementById('data4')
+        let d5 = document.getElementById('data5')
+        let d6 = document.getElementById('data6')
+        const resp = fetch('https://api.github.com/users').then(response =>{
+            return response.json()
+        })
+        .then(data =>{
+            console.log(data)
+            d1.innerHTML = data[0].login
+            d2.innerHTML = data[0].id
+            d3.innerHTML = data[0].avatar_url
+            d4.innerHTML = data[1].login
+            d5.innerHTML = data[1].id
+            d6.innerHTML = data[1].avatar_url
+        })
+    </script>
+</body>
+</html>
