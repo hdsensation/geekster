@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+
+        .container {
+            width: 100%;
+            min-height: 100vh;
+            padding-left: 8%;
+            padding-right: 8%;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+
+        .navbar {
+            width: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            cursor: pointer;
+            margin: 30px 0;
+        }
+
+        .menu-icon {
+            cursor: pointer;
+            width: 35px;
+            display: none;
+        }
+
+        nav {
+            flex: 1;
+            text-align: right;
+        }
+
+        nav ul li {
+            list-style: none;
+            display: inline-block;
+            margin-right: 30px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #000;
+            font-size: 14px;
+        }
+
+        nav ul li a:hover {
+            color: cyan;
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 100px 0;
+        }
+
+        .col1 {
+            flex-basis: 40%;
+            position: relative;
+            margin-left: 50px;
+        }
+
+        button {
+            width: 140px;
+            border: 0;
+            padding: 12px 10px;
+            outline: none;
+            color: #fff;
+            background: linear-gradient(to right, cyan, blue);
+            border-radius: 7px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            width: 160px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .col2 {
+            position: relative;
+            flex-basis: 60%;
+            display: flex;
+            align-items: center;
+        }
+
+        .col2 .cont {
+            width: 90%;
+
+        }
+
+        @media only screen and (max-width:700px) {
+
+            nav ul {
+                width: 100%;
+                background: linear-gradient(burlywood);
+                position: absolute;
+                top: 75px;
+                right: 0;
+            }
+
+            nav ul li {
+                display: block;
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+
+            nav ul li a{
+                color: black;
+            }
+
+            .menu-icon {
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="navbar">
+            <img src="https://geekster.in/images/logo.svg" alt="Failed to load" class="logo">
+            <nav>
+                <ul id="mlist">
+                    <li><a href="https://geekster.in/">Main Page</a></li>
+                    <li><a href="https://geekster.in/full-stack-web-development-program">Full Stack</a></li>
+                    <li><a href="https://geekster.in/advanced-full-stack-web-development-course">Advance Course</a></li>
+                    <li><a href="https://geekster.in/contact-us">Support</a></li>
+                </ul>
+            </nav>
+            <img src="https://thumbs.dreamstime.com/b/hamburger-menu-bar-icon-eyeball-blue-round-button-isolated-143280653.jpg"
+                class="menu-icon" onclick="toggleMenu()" >
+        </div>
+
+        <div class="row">
+            <div class="col1">
+                <h1>Geekster</h1>
+                <h2>Get Train With The Best</h2>
+                <button type="button">Press to Explore &rarr; </button>
+            </div>
+            <div class="col2">
+                <img src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1120&q=80"
+                    alt="" class="cont">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var mlist = document.getElementById("mlist");
+
+        mlist.style.maxHeight = "0px";
+
+        function toggleMenu() {
+            if (mlist.style.maxHeight == "0px") {
+                mlist.style.maxHeight = "130px";
+            }
+            else {
+                mlist.style.maxHeight = "0px";
+            }
+        }
+    </script>
+</body>
+
+</html>
