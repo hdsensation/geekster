@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flipkart Clone</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        overflow: hidden;
+      }
+
+      .navbar {
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: 0;
+      }
+
+     
+      .nav-top {
+        background-color: #2874ef;
+        display: flex;
+        flex-direction: row;
+      }
+      .nav-bottom {
+        background-color: #fff;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2vw;
+      }
+
+      .top-left {
+        flex: 1;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2vw;
+      }
+      .top-right {
+        flex: 1;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1vw;
+      }
+
+      .logo {
+        color: #fff;
+        font-size: 1.2rem;
+        font-family: sans-serif;
+        letter-spacing: 1px;
+      }
+
+      .search {
+        width: 280px;
+        height: 50%;
+        padding: 10px;
+        border-radius: 8px;
+        border: none;
+      }
+
+      .link {
+        text-decoration: none;
+        color: #fff;
+        font-family: sans-serif;
+        font-size: 1.1rem;
+      }
+      .dropdown {
+        width: 100px;
+        padding: 5px;
+      }
+      .link_ {
+        text-decoration: none;
+        color: #1e1e1e;
+        font-family: sans-serif;
+        font-size: 1.1rem;
+      }
+
+      .container {
+        width: 100vw;
+        height: 100vh;
+        margin-top: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 1vw;
+      }
+      .ctn-left {
+        height: 100%;
+        background-color: antiquewhite;
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .ctn-right {
+        height: 100%;
+        flex: 4;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1vh;
+      }
+      tr {
+        height: 50px;
+        background-color: whitesmoke;
+      }
+      td {
+        padding: 50px;
+      }
+      .item-ctn {
+        width: 1100px;
+        height: 400px;
+        background-color: white;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+          rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 5vw;
+      }
+
+      .item-left {
+        flex: 3;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 3vw;
+        font-family: sans-serif;
+      }
+      .item-right {
+        flex: 1;
+        height: 100%;
+        background-color: whitesmoke;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      @media (max-width:768px) {
+        .nav, .container{
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-top">
+        <div class="top-left">
+          <h2 class="logo">Flipkart</h2>
+          <input placeholder="Enter keyword" class="search" />
+        </div>
+        <div class="top-right">
+          <a href="#" class="link">Login</a>
+          <a href="#" class="link">Explore</a>
+          <a href="#" class="link">Cart</a>
+        </div>
+      </div>
+      <div class="nav-bottom">
+        <img
+          src="https://rukminim1.flixcart.com/flap/128/128/image/f15c02bfeb02d15d.png?q=100"
+          alt=""
+          height="64px"
+          width="64px"
+          class="link"
+        />
+        <img
+          src="https://rukminim1.flixcart.com/flap/128/128/image/29327f40e9c4d26b.png?q=100"
+          alt=""
+          height="64px"
+          width="64px"
+          class="link"
+        />
+        <img
+          src="https://rukminim1.flixcart.com/flap/128/128/image/22fddf3c7da4c4f4.png?q=100"
+          alt=""
+          height="64px"
+          width="64px"
+          class="link"
+        />
+        <img
+          src="https://rukminim1.flixcart.com/flap/128/128/image/82b3ca5fb2301045.png?q=100"
+          alt=""
+          height="64px"
+          width="64px"
+          class="link"
+        />
+        <img
+          src="https://rukminim1.flixcart.com/flap/128/128/image/69c6589653afdb9a.png?q=100"
+          alt=""
+          height="64px"
+          width="64px"
+          class="link"
+        />
+        <img
+          src="https://rukminim1.flixcart.com/flap/128/128/image/ab7e2b022a4587dd.jpg?q=100"
+          alt=""
+          height="64px"
+          width="64px"
+          class="link"
+        />
+        <img
+          src="https://rukminim1.flixcart.com/flap/128/128/image/0ff199d1bd27eb98.png?q=100"
+          alt=""
+          height="64px"
+          width="64px"
+          class="link"
+        />
+        <img
+          src="https://rukminim1.flixcart.com/flap/128/128/image/71050627a56b4693.png?q=100"
+          alt=""
+          height="64px"
+          width="64px"
+          class="link"
+        />
+        <img
+          src="https://rukminim1.flixcart.com/flap/128/128/image/dff3f7adcf3a90c6.png?q=100"
+          alt=""
+          height="64px"
+          width="64px"
+          class="link"
+        />
+      </div>
+    </nav>
+    <div class="container">
+      <div class="ctn-left">
+        <table class="placeholders">
+          <tr>
+            <td>
+              <br>
+              <h2>Select Brand</h2>
+              <label for="test_">Appul</label>
+              <input type="checkbox" class="test_" /><br />
+              <label for="test_">SHAAMSUNG</label>
+              <input type="checkbox" class="test_" /><br />
+              <label for="test_">Gony</label>
+              <input type="checkbox" class="test_" /><br />
+              <label for="test_">Kyo-KIA</label>
+              <input type="checkbox" class="test_" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <h2>Price</h2>
+              <label for="points">Points (Min 1 and Max 501):</label>
+              <input type="range" id="points" name="points" min="1" max="501" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+                <h2> Type Of Phones</h2>
+                <label for="ticka_">Smartphones</label>
+                <input type="radio" class="ticka_" name="rt"><br>
+                <label for="ticka_">keypad</label>
+                <input type="radio" class="ticka_" name="rt">
+            </td>
+          </tr>
+          <tr>
+            <td>
+                <h2>Operating System</h2>
+                <label for="os">Android</label>
+                <input type="checkbox" class="os">
+                <label for="os">I-OS</label>
+                <input type="checkbox" class="os">
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="ctn-right">
+        <div class="item-ctn">
+          <div class="item-left">
+            <img
+              src="https://rukminim1.flixcart.com/image/416/416/kg8avm80/mobile/n/p/d/apple-iphone-12-mini-dummyapplefsn-original-imafwgbfwyzztfnh.jpeg?q=70"
+              alt=""
+            />
+            <div class="description-ctn">
+              <h2 class="desc">Appul</h2>
+              <h2 class="desc">I-phone 20</h2>
+              <h2 class="desc">Cheap Edition</h2>
+            </div>
+            <button
+              style="
+                background-color: #d18b31;
+                padding: 10px;
+                border-radius: 10px;
+                cursor: pointer;
+              "
+            >
+              BUY NOW
+            </button>
+            <button
+              style="
+                background-color: red;
+                padding: 10px;
+                border-radius: 10px;
+                cursor: pointer;
+              "
+            >
+              ADD TO CART &plus;
+            </button>
+          </div>
+          <div class="item-right">
+            <div class="ico" style="text-align: center">
+              <img
+                src="https://static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/fa_62673a.png"
+                alt=""
+                height="21px"
+              />
+              <p style="text-decoration: line-through">1,00,000,00/-</p>
+              <h4>Offer Price:51/-</h4>
+              <p>Delivery Charges:50000/-</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
