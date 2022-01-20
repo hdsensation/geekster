@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #0977bc;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100vw;
+        }
+
+        .main {
+            padding: 20px 100px;
+            border: 3px solid;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: large;
+            color: whitesmoke;
+        }
+
+        button {
+            height: 30px;
+            width: 55px;
+            border-radius: 7px;
+            color: azure;
+        }
+
+        #start {
+            background-color: green;
+        }
+
+        #stop {
+            background-color: red;
+        }
+
+        #reset {
+            background-color: yellow;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="main">
+            <img src="https://image.shutterstock.com/image-vector/alarm-clock-cute-mascot-design-260nw-1799543185.jpg"
+                alt="Error">
+            <p><span id="seconds">00</span> : <span id="tens">00</span></p>
+            <button id="start">Start</button>
+            <button id="stop">Pause</button>
+            <button id="reset">Reset</button>
+        </div>
+    </div>
+
+    <script>
+        var seconds = 0;
+        var tens = 0;
+        var appntens = document.getElementById("tens");
+        var appnsec = document.getElementById("seconds");
+        var bttnstart = document.getElementById('start');
+        var bttnstop = document.getElementById('stop');
+        var bttnreset = document.getElementById('reset');
+        var Interval;
+
+        bttnstart.onclick = function () {
+
+            clearInterval(Interval);
+            Interval = setInterval(startTimer, 10);
+        }
+
+        bttnstop.onclick = function () {
+            clearInterval(Interval);
+        }
+
+
+        bttnreset.onclick = function () {
+            clearInterval(Interval);
+            tens = "00";
+            seconds = "00";
+            appntens.innerHTML = tens;
+            appnsec.innerHTML = seconds;
+        }
+
+
+
+        function startTimer() {
+            tens++;
+
+            if (tens <= 9) {
+                appntens.innerHTML = "0" + tens;
+            }
+
+            if (tens > 9) {
+                appntens.innerHTML = tens;
+
+            }
+
+            if (tens > 99) {
+                console.log("seconds");
+                seconds++;
+                appnsec.innerHTML = "0" + seconds;
+                tens = 0;
+                appntens.innerHTML = "0" + 0;
+            }
+
+            if (seconds > 9) {
+                appnsec.innerHTML = seconds;
+            }
+
+        }
+
+    </script>
+</body>
+
+</html>
