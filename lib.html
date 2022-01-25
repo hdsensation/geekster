@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library Homepage</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Train+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Petit+Formal+Script&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <style>
+      body {
+  margin: 0;
+  padding: 0;
+  font-family: "Train One", cursive;
+  background-color: rgb(48, 47, 45);
+}
+
+h1 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 60px;
+  color: white;
+  font-family: "Petit Formal Script", cursive;
+}
+
+.main {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px;
+  margin: 10px;
+  outline: none;
+  font-size: 20px;
+  text-decoration: none;
+  font-family: "Shadows Into Light", cursive;
+  font-weight: bold;
+  border: 5px double black;
+}
+
+button:hover {
+  text-decoration: underline;
+  background-color: black;
+  color: white;
+  border: 5px double yellow;
+}
+
+table {
+  margin: 0 auto;
+  width: 80%;
+  text-align: center;
+  color: white;
+  margin-top: 30px;
+}
+
+table th {
+  align-content: center;
+  font-size: 40px;
+}
+
+#tableData {
+  font-family: "Amatic SC", cursive;
+  font-size: 32px;
+}
+  </style>
+  <body>
+    <h1>MY LIBRARY</h1>
+
+    <div class="main">
+      <button id="dataButton" type="button" name="button">START</button>
+      <button id="showButton" type="button" name="button">SHOW</button>
+      <button onclick="myDeleteFunction()">DELETE</button>
+    </div>
+
+    <hr />
+
+    <table>
+      <thead>
+        <tr id="headData">
+          <th>MOVIE</th>
+          <th>AUTHOR</th>
+          <th>PAGES</th>
+          <th>READ</th>
+        </tr>
+      </thead>
+      <tbody id="tableData"></tbody>
+    </table>
+    <script>
+        let myLibrary = [];
+
+function Book(name, director, pages, read) {
+  this.name = name;
+  this.director = director;
+  this.pages = pages;
+  this.read = read;
+}
+
+const addBookToLibrary = () => {
+  let notification = alert("Add your book details");
+  let name = String(prompt("Add your book name?"));
+  let director = String(prompt("Add the author?"));
+
+  let pages = parseInt(prompt("Add the pages?"));
+  if (Number.isNaN(pages)) {
+    return 0;
+  }
+  let read = String(prompt("What is your reading status?"));
+  let does = new Book(name, director, pages, read);
+  myLibrary.push(does);
+};
+
+const btn = document.getElementById("dataButton");
+btn.addEventListener("click", addBookToLibrary);
+
+const myFunction = () => {
+  let myArray = Object.values(myLibrary);
+
+  let table = document.getElementById("tableData");
+
+  let row = table.insertRow(0);
+  let cell1 = row.insertCell(0);
+  let cell2 = row.insertCell(1);
+  let cell3 = row.insertCell(2);
+  let cell4 = row.insertCell(3);
+
+  let i = 0;
+
+  myLibrary.forEach((name, director, pages, read) => {
+    const nice = myLibrary[i].name;
+    const nice1 = myLibrary[i].director;
+    const nice2 = myLibrary[i].pages;
+    const nice3 = myLibrary[i].read;
+
+    i++;
+
+    cell1.innerHTML = nice;
+    cell2.innerHTML = nice1;
+    cell3.innerHTML = nice2;
+    cell4.innerHTML = nice3;
+  });
+};
+
+const stn = document.getElementById("showButton");
+stn.addEventListener("click", myFunction);
+
+const myDeleteFunction = () => {
+  document.getElementById("tableData").deleteRow(0);
+};
+    </script>
+  </body>
+</html>
